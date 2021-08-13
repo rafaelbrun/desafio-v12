@@ -1,0 +1,13 @@
+body {
+  min-height: 100vh;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #97455b2f;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}

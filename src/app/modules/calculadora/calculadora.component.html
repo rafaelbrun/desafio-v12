@@ -1,0 +1,39 @@
+<div class="main-container-calculadora">
+    <div class="name-container">
+        <label>Informe seu nome
+            <input [(ngModel)]="name">
+        </label>
+    </div>
+    <div class="calculator-container">
+        <div class="result-container">
+            <textarea readonly="true" [(ngModel)]="equation"></textarea>
+        </div>
+        <div class="buttons-container">
+            <button class="number-button" (click)="handleDigitButton('1')"> 1 </button>
+            <button class="number-button" (click)="handleDigitButton('2')"> 2 </button>
+            <button class="number-button" (click)="handleDigitButton('3')"> 3 </button>
+            <button class="number-button" (click)="handleDigitButton(' + ')"> + </button>
+            <button class="number-button" (click)="handleDigitButton('4')"> 4 </button>
+            <button class="number-button" (click)="handleDigitButton('5')"> 5 </button>
+            <button class="number-button" (click)="handleDigitButton('6')"> 6 </button>
+            <button class="number-button" (click)="handleDigitButton(' - ')"> - </button>
+            <button class="number-button" (click)="handleDigitButton('7')"> 7 </button>
+            <button class="number-button" (click)="handleDigitButton('8')"> 8 </button>
+            <button class="number-button" (click)="handleDigitButton('9')"> 9 </button>
+            <button class="number-button" (click)="handleDigitButton(' * ')"> * </button>
+            <button class="number-button" (click)="handleDigitButton('0')"> 0 </button>
+            <button class="number-button" (click)="handleDigitButton('( ')"> ( </button>
+            <button class="number-button" (click)="handleDigitButton(' )')"> ) </button>
+            <button class="number-button" (click)="handleDigitButton(' / ')"> / </button>
+        </div>
+        <div class="submit-container">
+            <button class="submit-button number-button" (click)="handleEquation()">CALCULAR</button>
+            <button class="submit-button number-button" (click)="handleClean()">C</button>
+            <button class="submit-button number-button" (click)="handleDeleteCharacter()"><<</button>
+        </div>
+    </div>
+    <p class="error-message">{{errorMessage}}</p>
+    <div class="history-container">
+        <button [routerLink]="['/resultados']">HISTÓRICO DE RESULTADOS</button>
+    </div>
+</div>

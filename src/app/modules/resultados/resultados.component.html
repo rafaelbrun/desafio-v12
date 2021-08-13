@@ -1,0 +1,9 @@
+<div class="main-container-resultados">
+    <div class="result-container">
+        <span class="result-title">Histórico de operações</span>
+        <p class="result-text" *ngFor="let result of results">{{result}}</p>
+    </div>
+    <div class="calculate-container">
+        <button [routerLink]="['/calculadora']">CALCULADORA</button>
+    </div>
+</div>
